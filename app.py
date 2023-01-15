@@ -3,6 +3,8 @@ from utils.bot_commands import set_default_commands
 from loader import dp
 import handlers
 import utils
+import asyncio
+
 
 async def on_startup(dp):
     await set_default_commands(dp)
