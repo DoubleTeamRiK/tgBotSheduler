@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-"""Create button for create, view, edit shedule"""
+"""Button for create, view, edit shedule"""
 shedule_mrkup = InlineKeyboardMarkup(row_width=1)
 shedule_create_frofile_btn = InlineKeyboardButton(
     text='Создать профиль',
@@ -30,3 +30,6 @@ shedule_mrkup.add(shedule_create_frofile_btn,
                   shedule_edit_btn,
                   shedule_change_profile_btn
                   )
+
+master_profile_kb = InlineKeyboardMarkup(row_width=1)
+

@@ -21,8 +21,7 @@ class Theeme(BaseModel):
 
 class Users(BaseModel):
     user_tg_id = IntegerField()
-    user_name = CharField(max_length=50)
-    position = ForeignKeyField(Position.pos_title)
+    user_name = CharField(max_length=50)    
 
 
 class MasterProfile(BaseModel):
@@ -31,6 +30,7 @@ class MasterProfile(BaseModel):
     about_yourself = TextField()
     location = CharField()
     user_id = ForeignKeyField(Users.user_tg_id)
+    position = ForeignKeyField(Position.pos_title)
 
 
 class PhotoMasters(BaseModel):
@@ -47,3 +47,7 @@ class PhotoMasters(BaseModel):
 
 db.connect()
 db.create_tables([Position, Users, Theeme, MasterProfile, PhotoMasters])
+# theemes = ['Косметолог', 'Визажист', 'Массаж', 'Маникюр/Педикюр', 'Брови', 'Депиляция']
+# for theeme in theemes:
+#     th = Theeme(theeme_title=theeme)
+#     th.save()
